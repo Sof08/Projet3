@@ -1,0 +1,238 @@
+@font-face {
+    /*le nom que tu va utiliser par la suite pour utiliser la font*/
+    font-family:"Shrikhand-Regular";
+    /*lien vers la font*/
+    src: url("font/Shrikhand-Regular.ttf") format("truetype");
+
+  } 
+  @font-face {
+    font-family: "roboto";
+    src: url("roboto-regular.ttf") format("truetype");
+  }
+  
+  body {
+    margin: 0;
+    font-family:'Raleway', sans-serif;
+  }
+.titre {
+    font-size: 36PX;
+    margin: 5.1px;
+
+}
+  .titre1 {
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    font-size: 30PX;
+    font-family: "Shrikhand-Regular";
+    text-transform: lowercase
+  }
+.fa {
+    color: #000;
+    display: flex;
+    position: absolute;
+    PADDING: 16PX 0PX 0PX 18PX;
+    font-size: 22PX;
+}
+  .testimage {
+    width: 100%;
+  }
+  .testimage img{
+    width: 100%;
+  }
+section {
+    /* HEIGHT: 99%; */
+    /* MARGIN-BOTTOM: 38PX; */
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: relative;
+    margin-top: -4rem;
+    border-radius: 2rem 2rem 0 0;
+}
+.titrerestau{
+    margin: 0PX 0PX 0PX 15PX;
+    PADDING-TOP: 35PX;
+}
+.titremenu {
+    font-size: 16PX;
+    font-weight: initial;
+    margin: 20PX 0PX 0PX 15PX;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: 400;
+}
+.titremenu:after {
+    content: "";
+    width: 3rem;
+    height: 0.25rem;
+    background-color: #99e2d0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.divplats {
+    background-color: #fff;
+    padding: 15PX;
+    display: flex;
+    border-radius: 15PX;
+    margin: 15PX 15PX 0PX 11PX;
+    box-shadow: 2PX 1PX 8PX rgb(0 0 0 / 10%);
+    overflow: hidden;
+    cursor: pointer;
+    animation: itemAppear .6s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+   /* transform: scale(0);*/
+    max-width: 100%;
+}
+.divplatsdetaille{
+    margin: 0;
+    display: flex;
+    flex-flow: wrap;
+    place-content: end;
+    WIDTH: 100%;
+}
+.platmenu {
+margin: 0;
+}
+.platmenudetaille {
+    margin: 0;
+    DISPLAY: flex;
+    /* WIDTH: 188%; */
+    FLEX: AUTO;
+
+}
+.prix {
+        /* margin: 0; */
+        /* justify-content: flex-end; */
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 0.5rem;
+}
+.commander {
+    /*border-radius: 25PX;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));*/
+    PADDING: 16PX 0PX 17PX 0PX;
+    MARGIN: 5PX 60PX 1PX 60PX;
+    /*box-shadow: 1PX 2PX 11PX -5PX;*/
+    DISPLAY: flex;
+    JUSTIFY-CONTENT: center;
+}
+.commanderbtn {
+    border: 0;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    transition-duration: .25s;
+    
+    cursor: pointer;
+}
+
+.commanderbtn:hover{
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+}
+footer {
+    background-color: #303030;
+    color: #f3f3f3;
+    PADDING: 10PX 0PX 0PX 0PX;
+    /* MARGIN: 2PX 0PX 0PX 0PX; 
+    HEIGHT: 170PX;*/
+    HEIGHT: 200PX;
+}
+footer h3 {
+    font-family: "Shrikhand-Regular" ;
+    text-transform: lowercase;
+    PADDING: 0PX 0PX 0PX 40PX;
+}
+
+.list_footer{
+    list-style: none;
+}
+.list_footer a{
+    color: white;
+}
+
+.bouton_confirmation{
+    background-color: #99e2d0;
+    margin: -1rem -5rem -1rem 1rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+}
+.bouton_confirmation_icon{
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transition-duration: .5s;
+}
+.item_icon {
+    color: #99e2d0;
+}
+.plat_item{
+    flex: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.divplats:hover .bouton_confirmation {
+    margin-right: -1rem;
+}
+.divplats:hover .platmenudetaille{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    display: block;
+}
+.list_footer a {
+    text-decoration: none;
+}
+.list_footer li{
+    margin: 10px 0 10px 0;
+}
+.divplats:hover .bouton_confirmation_icon {
+    transform: rotate(0);
+}
+.bouton_confirmation_icon {
+    transform: rotate(360deg);
+    transition-duration: 1.2s;
+}
+.entree{
+    transition-duration: .10s;
+    transition: all 1s;
+}
+.plat{
+    transition-duration: .5s;
+}
+
+.divplats {
+    
+     animation: divplats 2s; 
+
+    
+}
+@keyframes divplats {
+    0% { 
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0); 
+        opacity: 1;
+    }
+
+  }
+
