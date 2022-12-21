@@ -71,20 +71,18 @@ section {
     height: 4PX;
     bottom: 0;
     left: 0;
+    right: 0;
 }
 .divplats {
-    background-color: #fff;
-    padding: 15PX;
     display: flex;
+    max-width: 100%;
+    background-color: #fff;
+    padding: 15PX;    
     border-radius: 15PX;
     margin: 15PX 15PX 0PX 11PX;
-    box-shadow: 2PX 1PX 8PX rgb(0 0 0 / 10%);
+    box-shadow: 2PX 1PX 8PX rgb(0 0 0 / 8%);
     overflow: hidden;
-    cursor: pointer;
-    animation: itemAppear .6s;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-    animation-fill-mode: both; 
-    max-width: 100%;
+    cursor: pointer; 
 }
 .divplatsdetaille{
     margin: 0;
@@ -104,13 +102,11 @@ margin: 0;
 
 }
 .prix {
-        /* margin: 0; */
-        /* justify-content: flex-end; */
+    margin: 0; 
+    justify-content: flex-end;
     font-weight: 700;
     display: flex;
-    justify-content: flex-end;
     align-items: flex-end;
-    padding-left: 10px;
 }
 .commander {
     /*border-radius: 25PX;
@@ -122,15 +118,15 @@ margin: 0;
     JUSTIFY-CONTENT: center;
 }
 .commanderbtn {
-    border: 0;
-    padding: 10PX 25PX;
+    background-image: linear-gradient(1deg,rgb(146 79 255 / 86%),rgb(255 131 210 / 74%));
+    padding: 10PX 25PX 10PX 25PX;
     font-weight: 300;
     font-size: 20PX;
-    border-radius: 100px;
+    border-radius: 25px;
     color: #fff;
     background-color: #687980; 
-    cursor: pointer;
-    background-image: linear-gradient(0deg,rgba(146,79,260,.5),rgba(310,131,210,.9));
+    cursor: pointer;    
+    border: 0;
 }
 
 .commanderbtn:hover{
@@ -179,9 +175,7 @@ footer h3 {
 }
 .plat_item{
     flex: 1;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+
 }
 .divplats:hover .bouton_confirmation {
     margin-right: -16px;
@@ -230,4 +224,70 @@ footer h3 {
     }
 
   }
+  .far {
+    display: flex;
+    justify-content: end;
+    position: relative;
+   
+    font-size: 26PX;
+} 
+.fa{
+  font-size: 26PX;
+}
 
+.fa:hover {
+ 
+  color: black;
+    font-size: 20PX;
+    DISPLAY: flex;
+    FLEX-DIRECTION: row-reverse;
+    cursor: pointer;
+}
+
+.coeur2 {
+  margin: -26PX 14PX 0PX 0PX;
+}
+.coeur2:hover {
+  
+  cursor: pointer;
+  margin: -26PX 14PX 0PX 0PX;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  position: relative;
+  font-size: 26PX;
+  transition: 1.9s;
+}
+.coeur{
+  position: relative;
+  background-color: #000;
+  border: 0 solid transparent;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+.coeur:before{
+  opacity: 0;
+  content: "";
+  background: linear-gradient(0deg,#9356dc,#ff79da);
+}
+.coeur:before, .coeur_icon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.coeur_icon{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.coeur_icon{
+  mix-blend-mode:lighten;
+  transition-duration: 1s;
+}
+.coeur:hover{
+  background: linear-gradient(0deg,#9356dc,#ff79da);
+  transition: 3.9s;
+}
