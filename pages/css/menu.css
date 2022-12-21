@@ -47,8 +47,8 @@ section {
     background-color: #f6f6f6;
     z-index: 1;
     position: relative;
-    margin-top: -4rem;
-    border-radius: 2rem 2rem 0 0;
+    margin-top: -37px;
+    border-radius: 40px 40px 0 0;
 }
 .titrerestau{
     margin: 0PX 0PX 0PX 15PX;
@@ -60,17 +60,17 @@ section {
     margin: 20PX 0PX 0PX 15PX;
     text-transform: uppercase;
     position: relative;
-    padding-bottom: 0.5rem;
+    padding-bottom: 10px;
     font-weight: 400;
 }
 .titremenu:after {
-    content: "";
-    width: 3rem;
-    height: 0.25rem;
-    background-color: #99e2d0;
     position: absolute;
-    left: 0;
+    background-color: #99e2d0;
+    content: "";
+    width: 41px;
+    height: 4PX;
     bottom: 0;
+    left: 0;
 }
 .divplats {
     background-color: #fff;
@@ -83,8 +83,7 @@ section {
     cursor: pointer;
     animation: itemAppear .6s;
     animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-    animation-fill-mode: both;
-   /* transform: scale(0);*/
+    animation-fill-mode: both; 
     max-width: 100%;
 }
 .divplatsdetaille{
@@ -111,7 +110,7 @@ margin: 0;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-left: 0.5rem;
+    padding-left: 10px;
 }
 .commander {
     /*border-radius: 25PX;
@@ -124,27 +123,23 @@ margin: 0;
 }
 .commanderbtn {
     border: 0;
-    padding: 0.75rem 1.5rem;
-    font-weight: 500;
-    font-size: 1.1rem;
+    padding: 10PX 25PX;
+    font-weight: 300;
+    font-size: 20PX;
     border-radius: 100px;
     color: #fff;
-    background-color: #686868;
-    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-    transition-duration: .25s;
-    
+    background-color: #687980; 
     cursor: pointer;
+    background-image: linear-gradient(0deg,rgba(146,79,260,.5),rgba(310,131,210,.9));
 }
 
 .commanderbtn:hover{
-    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+    box-shadow: 5px 3px 12px rgba(0, 0, 0, 0.25);
 }
 footer {
     background-color: #303030;
     color: #f3f3f3;
     PADDING: 10PX 0PX 0PX 0PX;
-    /* MARGIN: 2PX 0PX 0PX 0PX; 
-    HEIGHT: 170PX;*/
     HEIGHT: 200PX;
 }
 footer h3 {
@@ -162,22 +157,22 @@ footer h3 {
 
 .bouton_confirmation{
     background-color: #99e2d0;
-    margin: -1rem -5rem -1rem 1rem;
-    width: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-duration: .5s;
+    margin: -23PX -78PX -22PX 14PX;
+    width: 62PX;
+    transition-duration: 1.5s;
 }
 .bouton_confirmation_icon{
-    height: 1.6rem;
-    width: 1.6rem;
+    height: 30px;
+    width: 30px;
     background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100px;
-    transition-duration: .5s;
+    transition-duration: 1s;
 }
 .item_icon {
     color: #99e2d0;
@@ -189,7 +184,7 @@ footer h3 {
     overflow: hidden;
 }
 .divplats:hover .bouton_confirmation {
-    margin-right: -1rem;
+    margin-right: -16px;
 }
 .divplats:hover .platmenudetaille{
     white-space: nowrap; 

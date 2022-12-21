@@ -23,6 +23,7 @@ body {
   inset: 0;
   animation: loader 3s;
  overflow: hidden;
+ animation-fill-mode: forwards;
 }
 .point {
   width: 50px;
@@ -63,8 +64,8 @@ margin: 0;
   text-align: center;
   padding: 15PX 0PX;
   background-color: GAINSBORO;
-  font-size: 1.2rem;
   position: relative;   
+  font-size: 15PX;
 }
 .iconlocalisation {
   padding: 0PX 0PX 0PX 0PX;
@@ -93,7 +94,7 @@ input {
   }
 .explorerbtn{
   border-radius: 25PX;
-  background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+  background-image: linear-gradient(0deg,rgba(146,79,260,.5),rgba(310,131,210,.9));
   PADDING: 12PX 0PX 12PX 0PX;
   MARGIN: 0PX 60PX 0PX 60PX;
   box-shadow: 1PX 2PX 11PX -5PX;
@@ -104,10 +105,14 @@ a {
 .btn {
   outline: inherit;
   color:#F1F1F1;
-  font-size:18px;
+  /*font-size:15px;*/
   BORDER: NONE;
   BOX-SHADOW: NONE;
   background: none;
+  cursor: pointer;
+}
+.explorerbtn:hover{
+  box-shadow: 5px 3px 12px rgba(0, 0, 0, 0.25);
 }
 
 .bouton {  
@@ -127,9 +132,40 @@ button {
 .fonctionnement {
   PADDING-LEFT: 20PX;
 }
+/*Liste de numérotation*/
+ol{
+  list-style: none;
+  counter-reset: compteListe;
+  padding: 5%;
+}
 li {
   list-style: circle;
 }
+.bouton{
+  padding: 25px;
+  margin: 10px;
+  box-shadow: 10px 5px 5px rgb(0 0 1);
+  border-radius: 20px;
+  background-color: #f6f6f6;
+}
+.bouton:before{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #9356dc;
+  color: #fff;
+  border-radius: 100px;
+  counter-increment: compteListe 1;
+  content: counter(compteListe);
+  left: -11px;
+  width: 25px;
+  height: 25px;
+}
+.bouton:hover{
+  background-color: #9356dc21;
+}
+
 /*.icon {
   margin: 0PX 30PX 0PX -26PX;
 }*/
@@ -155,7 +191,6 @@ section h1 {
 .divglobal img {
   width: 100%;
   height: 185px;
-  /* margin: 0PX 0PX 0PX 0PX; */
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   object-fit: cover;
@@ -163,20 +198,17 @@ section h1 {
 .descriptiontext {
   display: block;
   font-size: 9PX;
-  /*MARGIN: -3PX 0PX 0PX 0PX;
-  PADDING: 0PX 0PX 0PX 13PX;*/
   MARGIN: -12PX 0PX 0PX 0PX;
   color:#303030
 }
 .textpdg h2 {
   margin: 9PX 0PX -3PX 0PX; 
   color: black;
+  font-family: "roboto-regular";
 }
 .far {
-    /* width: 96%; */
     display: flex;
     justify-content: end;
-    /* position: absolute; */
     position: relative;
    
     font-size: 26PX;
@@ -184,30 +216,16 @@ section h1 {
 .fa{
   font-size: 26PX;
 }
-/*.far:hover {
-  display: flex;
-  justify-content: end;
-  position: absolute;
-  position: relative;
-  margin: -3PX 18PX 0PX 0PX;
-  font-size: 26PX;
-  transition: .5s;
-  content: "";
-  background: linear-gradient(0deg,#9356dc,#ff79da);
-}*/
 
 .fa:hover {
  
   color: black;
     font-size: 20PX;
-    /* opacity: 0; */
     DISPLAY: flex;
     FLEX-DIRECTION: row-reverse;
     cursor: pointer;
 }
-/*.coeur {
-  margin: -44PX 14PX 0PX 0PX;
-}*/
+
 .coeur2 {
   margin: -26PX 14PX 0PX 0PX;
 }
@@ -219,16 +237,50 @@ section h1 {
   justify-content: end;
   position: absolute;
   position: relative;
-  /* margin: -3PX 18PX 0PX 0PX; */
   font-size: 26PX;
   transition: 1.9s;
 }
+.coeur{
+  position: relative;
+  background-color: #000;
+  border: 0 solid transparent;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+.coeur:before{
+  opacity: 0;
+  content: "";
+  background: linear-gradient(0deg,#9356dc,#ff79da);
+}
+.coeur:before, .coeur_icon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.coeur_icon{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.coeur_icon{
+  mix-blend-mode:lighten;
+  transition-duration: 1s;
+}
+.coeur:hover{
+  background: linear-gradient(0deg,#9356dc,#ff79da);
+  transition: 3.9s;
+}
+
 footer {
   background-color: #303030;
     color: #f3f3f3;
     PADDING: 10PX 0PX 0PX 0PX;
     MARGIN: -44PX 0PX 0PX 0PX;
     HEIGHT: 170PX;
+    font-family: "roboto-regular";
 }
 footer h3 {
   font-family: "Shrikhand-Regular" ;
@@ -242,94 +294,20 @@ footer h3 {
 .list_footer a{
   color: white;
 }
-ol{
-  padding: 2rem 1rem;
-  list-style: none;
-  counter-reset: compteListe;
-}
-.bouton{
-  padding: 1.5rem;
-    margin: 1rem 0 1rem 0.75rem;
-    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
-    border-radius: 1.25rem;
-    background-color: #f6f6f6;
-    display: flex;
-    position: relative;
-}
-.bouton:before{
-  background: #9356dc;
-  color: #fff;
-  counter-increment: compteListe 1;
-  content: counter(compteListe);
-  position: absolute;
-  left: -0.75rem;
-  border-radius: 100px;
-  height: 1.5rem;
-  width: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.bouton:hover{
-  background-color: #9356dc21;
-}
+
+
 span.icon{
   color: lightslategray;
 }
 span.icon:hover{
   color:#9356dc;
 }
-.bouton_titre{
-  padding: 18px;
-}
-.coeur{
-  height: 2rem;
-  width: 2rem;
-  background-color: initial;
-  border: 0 solid transparent;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
-  background-color: #000;
-  
-}
-.coeur:before{
-  opacity: 0;
-  /*transition: .5s;*/
-  content: "";
-  background: linear-gradient(0deg,#9356dc,#ff79da);
-}
-.coeur:before, .coeur_icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-.coeur_icon{
-  transition-duration: .25s;
-  background-color: #f6f6f6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  mix-blend-mode: lighten;
-    
-}
-.coeur_icon{
-  background-color: #fff!important;
-}
-.coeur:hover{
-  background: linear-gradient(0deg,#9356dc,#ff79da);
-  transition: 3.9s;
-}
+
 .textpdg{
-  padding: 1rem;
-  position: relative;
   display: flex;
   align-items: center;
+  padding: 15PX;
+ 
 }
 .text{
   flex: 1;
@@ -341,10 +319,9 @@ span.icon:hover{
   opacity: 0;
 }
 .text_nouveau{
-  background-color: #99e2d0;
-  color: #1b6150;
-  padding: 0.5rem;
-  border-radius: 0.125rem;
+  background-color: #98D1c1;
+  color: #2D5231;
+  padding: 7PX;
   position: absolute;
   right: 11px;
   top: 14px;
